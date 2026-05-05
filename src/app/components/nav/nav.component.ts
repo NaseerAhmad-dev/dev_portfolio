@@ -23,6 +23,19 @@ export class NavComponent implements OnInit {
     this.p.getData().subscribe(d => this.navLinks = d.meta.navLinks);
   }
 
+  scrollTo(href: string): void {
+    this.closeMenu();
+    const id = href.replace('#', '');
+    const isHome = this.router.url === '/' || this.router.url.startsWith('/#');
+
+    if (isHome) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      this.router.navigate(['/'], { fragment: id });
+    }
+  }
+
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
