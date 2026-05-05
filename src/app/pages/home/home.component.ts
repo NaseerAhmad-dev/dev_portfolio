@@ -1,3 +1,3 @@
 import{Component}from'@angular/core';
-@Component({selector:'app-home-page',template:`<app-hero></app-hero><app-about></app-about><app-skills></app-skills><app-projects></app-projects><app-experience></app-experience><app-education></app-education><app-certifications></app-certifications><app-testimonials></app-testimonials><app-contact></app-contact><app-footer></app-footer>`})
+@Component({selector:'app-home-page',template:`<app-hero></app-hero><app-about></app-about><app-skills></app-skills><app-projects></app-projects><app-experience></app-experience><app-testimonials></app-testimonials><app-education></app-education><app-certifications></app-certifications><app-contact></app-contact><app-footer></app-footer>`})
 export class HomePageComponent{}

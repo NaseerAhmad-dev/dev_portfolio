@@ -211,7 +211,11 @@ nav {
 
 /* ── mobile ─────────────────────────────────── */
 @media (max-width: 680px) {
-  nav { padding: 0 .875rem }
+  nav {
+    padding: 0 .875rem;
+    display: flex;
+    justify-content: space-between;
+  }
 
   .logo-wrap { flex: 0 0 auto }
   .nav-end   { flex: 0 0 auto }
