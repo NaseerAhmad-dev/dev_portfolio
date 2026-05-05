@@ -14,7 +14,7 @@ nav {
   transition: background .35s ease, border-color .25s ease;
 }
 
-/* ── logo ───────────────────────────────────── */
+/* ── logo (left zone) ───────────────────────── */
 .logo-wrap {
   display: flex;
   align-items: center;
@@ -22,6 +22,7 @@ nav {
   cursor: pointer;
   text-decoration: none;
   flex-shrink: 0;
+  min-width: 130px;
 }
 
 .logo-mark {
@@ -57,35 +58,33 @@ nav {
 }
 
 .logo-role {
-  font-size: .64rem;
+  font-size: .62rem;
   font-weight: 400;
   color: var(--text3);
   transition: color .2s;
 }
 
-/* ── right wrapper ──────────────────────────── */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-}
-
-/* ── links row ──────────────────────────────── */
+/* ── links (center zone) ────────────────────── */
 .nav-links {
   display: flex;
-  gap: .1rem;
   align-items: center;
+  gap: .05rem;
+  /* true centering between logo and end */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-links a {
   text-decoration: none;
-  font-size: .76rem;
+  font-size: .75rem;
   font-weight: 500;
   color: var(--text2);
-  padding: .4rem .9rem;
+  padding: .38rem .8rem;
   border-radius: var(--r2);
   transition: color .15s, background .15s;
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover { color: var(--text); background: var(--bg2) }
 }
@@ -96,15 +95,19 @@ nav {
   color: var(--accent) !important;
   border: 1px solid var(--accent-border) !important;
   font-weight: 600 !important;
+  margin-left: .35rem;
 
   &:hover { background: rgba(200,255,87,.13) !important }
 }
 
-/* ── nav-end: theme toggle + hamburger ──────── */
+/* ── right zone ─────────────────────────────── */
 .nav-end {
   display: flex;
   align-items: center;
-  gap: .25rem;
+  gap: .35rem;
+  flex-shrink: 0;
+  min-width: 130px;
+  justify-content: flex-end;
 }
 
 /* ── theme toggle ───────────────────────────── */
@@ -134,7 +137,7 @@ nav {
   &:active { transform: rotate(15deg) scale(.92) }
 }
 
-/* ── hamburger button ───────────────────────── */
+/* ── hamburger ──────────────────────────────── */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -177,26 +180,21 @@ nav {
   &.visible { display: block }
 }
 
-/* ── responsive ─────────────────────────────── */
-@media (max-width: 680px) {
-  nav { padding: 0 .875rem }
-
-  .logo-role { display: none }
-
-  .theme-toggle { width: 30px; height: 30px }
-
-  .hamburger { display: flex }
+/* ── tablet: hamburger from 900px ───────────── */
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem }
 
   .nav-links {
     display: none;
     position: fixed;
+    transform: none;
     top: 58px;
     left: 0;
     right: 0;
     flex-direction: column;
     align-items: stretch;
     gap: .25rem;
-    padding: .75rem .875rem 1.25rem;
+    padding: .75rem 1.25rem 1.25rem;
     background: rgba(11,11,13,.97);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -207,9 +205,22 @@ nav {
 
     a {
       padding: .65rem .9rem;
-      font-size: .8rem;
+      font-size: .82rem;
     }
 
-    .nav-blog-pill { margin-top: .25rem }
+    .nav-blog-pill { margin-left: 0; margin-top: .25rem }
   }
+
+  .hamburger { display: flex }
+}
+
+/* ── mobile ─────────────────────────────────── */
+@media (max-width: 680px) {
+  nav { padding: 0 .875rem }
+
+  .logo-role { display: none }
+  .logo-wrap { min-width: auto }
+  .nav-end { min-width: auto }
+
+  .theme-toggle { width: 30px; height: 30px }
 }

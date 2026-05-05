@@ -1,6 +1,6 @@
 @keyframes pulse {
   0%, 100% { opacity: 1 }
-  50% { opacity: .3 }
+  50%       { opacity: .3 }
 }
 
 @keyframes slideIn {
@@ -19,23 +19,53 @@
   animation: slideIn .65s ease both;
 }
 
-/* ── header bar ────────────────────────────── */
-.hero-header {
+/* ── top bar ─────────────────────────────────── */
+.hero-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding-bottom: 1.5rem;
-  margin-bottom: 3.5rem;
-  border-bottom: 1px solid var(--border);
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
 }
 
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-kicker {
+  font-size: .6rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-label-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* status badge — same glass style as nav pill */
 .hero-status {
   display: inline-flex;
   align-items: center;
   gap: .45rem;
-  font-size: .72rem;
+  font-size: .7rem;
   font-weight: 500;
   color: var(--text2);
+  white-space: nowrap;
+  padding: .32rem .85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  background: var(--bg2);
+  flex-shrink: 0;
+  transition: border-color .2s, color .2s;
 }
 
 .hero-dot {
@@ -47,24 +77,17 @@
   animation: pulse 2.2s ease-in-out infinite;
 }
 
-.hero-index {
-  font-size: .65rem;
-  font-weight: 600;
-  color: var(--text3);
-  letter-spacing: .18em;
-}
-
-/* ── main copy ─────────────────────────────── */
-.hero-copy { margin-bottom: 2rem }
+/* ── main copy ───────────────────────────────── */
+.hero-body { margin-bottom: 1.5rem }
 
 .hero-greeting {
   display: block;
-  font-size: .78rem;
+  font-size: .75rem;
   font-weight: 500;
   color: var(--text2);
-  letter-spacing: .12em;
+  letter-spacing: .15em;
   text-transform: uppercase;
-  margin-bottom: .9rem;
+  margin-bottom: .85rem;
 }
 
 .hero-name {
@@ -74,57 +97,59 @@
   line-height: .92;
   letter-spacing: -.04em;
   color: var(--text);
-  margin-bottom: .9rem;
+  margin-bottom: .85rem;
 }
 
 .hero-role {
   display: block;
-  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  font-size: clamp(1.05rem, 2.4vw, 1.4rem);
   font-weight: 400;
   color: var(--accent);
   letter-spacing: -.01em;
 }
 
-/* ── subtitle ──────────────────────────────── */
+/* ── subtitle ────────────────────────────────── */
 .hero-sub {
-  font-size: .9rem;
+  font-size: .88rem;
   color: var(--text2);
   font-weight: 400;
-  max-width: 500px;
-  line-height: 1.85;
-  margin-bottom: 2.5rem;
+  max-width: 520px;
+  line-height: 1.9;
+  margin-bottom: 2rem;
 }
 
-/* ── actions ───────────────────────────────── */
+/* ── actions ─────────────────────────────────── */
 .hero-actions {
   display: flex;
   gap: .75rem;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 2.75rem;
 }
 
-/* ── divider ───────────────────────────────── */
-.hero-rule {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin-bottom: 2.5rem;
-}
-
-/* ── stats ─────────────────────────────────── */
+/* ── stats grid — mirrors certs/skills card pattern ── */
 .hero-stats {
-  display: flex;
-  gap: 3.5rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
 }
 
 .hero-stat {
+  background: var(--bg2);
+  padding: 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: .35rem;
+  gap: .3rem;
+  transition: background .2s;
+
+  &:hover { background: var(--bg3) }
 }
 
 .hero-stat-val {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1;
@@ -132,33 +157,49 @@
 }
 
 .hero-stat-lbl {
-  font-size: .67rem;
+  font-size: .6rem;
   color: var(--text3);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: .06em;
   text-transform: uppercase;
 }
 
-/* ── responsive ────────────────────────────── */
+/* ── responsive ──────────────────────────────── */
 @media (max-width: 680px) {
   .hero {
     padding: 2.5rem .875rem 2rem;
     min-height: auto;
   }
 
+  .hero-top { margin-bottom: 2rem }
+
+  .hero-label-line { display: none }
+
   .hero-name { font-size: clamp(3.8rem, 18vw, 5.5rem) }
 
-  .hero-stats { gap: 2rem }
+  .hero-actions { margin-bottom: 2rem }
 
-  .hero-header { margin-bottom: 2.5rem }
+  /* 2×3 → keep 3 cols but tighten padding */
+  .hero-stat { padding: 1rem .875rem }
+  .hero-stat-val { font-size: 1.3rem }
+  .hero-stat-lbl { font-size: .55rem; letter-spacing: .03em }
+}
+
+@media (max-width: 480px) {
+  /* collapse to 2 columns so labels don't truncate */
+  .hero-stats { grid-template-columns: repeat(2, 1fr) }
+  .hero-stat { padding: 1rem }
+  .hero-stat-val { font-size: 1.35rem }
+  .hero-stat-lbl { font-size: .58rem }
 }
 
 @media (max-width: 400px) {
-  .hero { padding: 2.5rem 1rem 2rem }
   .hero-name { font-size: clamp(3rem, 18vw, 4rem) }
-  .hero-stats { gap: 1.5rem }
-  .hero-stat-val { font-size: 1.65rem }
-  .hero-actions { flex-direction: column; align-items: stretch }
-  .hero-actions .btn-glow,
-  .hero-actions .btn-glass { text-align: center }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    .btn-glow, .btn-glass { text-align: center }
+  }
 }

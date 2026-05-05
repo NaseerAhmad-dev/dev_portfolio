@@ -53,7 +53,7 @@ body {
   background-size: 28px 28px;
   color: var(--text);
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -267,6 +267,13 @@ footer {
 }
 
 /* ─── Responsive ─────────────────────────────── */
+/* Light mode mobile nav dropdown (matches hamburger breakpoint) */
+@media (max-width: 900px) {
+  [data-theme="light"] .nav-links {
+    background: rgba(244,244,242,.97);
+  }
+}
+
 @media (max-width: 680px) {
   .section { padding: 3rem .875rem }
   .section-title { font-size: 1.6rem; margin-bottom: 2rem }
@@ -286,10 +293,6 @@ footer {
     gap: .35rem;
   }
 
-  /* Light mode mobile nav dropdown */
-  [data-theme="light"] .nav-links {
-    background: rgba(244,244,242,.97);
-  }
 }
 
 @media (max-width: 400px) {
