@@ -1,13 +1,18 @@
 <section class="hero" id="home" *ngIf="hero">
 
-  <header class="hero-header">
+  <!-- ── top bar: kicker + line + status badge ── -->
+  <div class="hero-top">
+    <div class="hero-label">
+      <span class="hero-kicker">00 — intro</span>
+      <div class="hero-label-line"></div>
+    </div>
     <span class="hero-status">
       <span class="hero-dot"></span>{{ availableText }}
     </span>
-    <span class="hero-index">00</span>
-  </header>
+  </div>
 
-  <div class="hero-copy">
+  <!-- ── main copy ──────────────────────────────── -->
+  <div class="hero-body">
     <span class="hero-greeting">{{ hero.titleLine1 }}</span>
     <h1 class="hero-name">{{ hero.titleLine2 }}</h1>
     <span class="hero-role">{{ hero.titleLine3 }}</span>
@@ -20,8 +25,7 @@
     <button class="btn-glass">{{ hero.ctaSecondary }}</button>
   </div>
 
-  <hr class="hero-rule">
-
+  <!-- ── stats grid (matches certs / skills card pattern) ── -->
   <div class="hero-stats">
     <div class="hero-stat" *ngFor="let s of hero.stats">
       <span class="hero-stat-val">{{ s.value }}</span>

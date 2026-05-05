@@ -22,9 +22,12 @@
     "ctaSecondary": "Download CV",
     "scrollHint": "scroll to explore",
     "stats": [
-      {"value": "100+", "label": "uis.shipped"},
-      {"value": "3+ yrs", "label": "at.purple.mavens"},
-      {"value": "30+",   "label": "components.built"}
+      {"value": "100+",  "label": "uis.shipped"},
+      {"value": "3+ yrs","label": "at.purple.mavens"},
+      {"value": "30+",   "label": "components.built"},
+      {"value": "20+",   "label": "projects.delivered"},
+      {"value": "5+",    "label": "juniors.mentored"},
+      {"value": "60%",   "label": "dev.time.saved"}
     ]
   },
 
