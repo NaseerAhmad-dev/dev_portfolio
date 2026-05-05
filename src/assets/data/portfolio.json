@@ -259,10 +259,10 @@
     "ctaLabel": "Send message →",
     "socialsKicker": "Find me online",
     "socials": [
-      {"icon": "🐙", "label": "GitHub",   "url": "#",                                                        "handle": "@naseer-dev"},
+      {"icon": "🐙", "label": "GitHub",   "url": "https://github.com/NaseerAhmad-dev",                       "handle": "@naseer-dev"},
       {"icon": "💼", "label": "LinkedIn", "url": "https://www.linkedin.com/in/naseer-ahmad-a59096229",       "handle": "/in/naseer-ahmad"},
       {"icon": "🐦", "label": "Twitter",  "url": "#",                                                        "handle": "@naseer_eng"},
-      {"icon": "📧", "label": "Email",    "url": "mailto:naseer.ahmad@purplemavens.com",                     "handle": "naseer.ahmad@purplemavens.com"},
+      {"icon": "📧", "label": "Email",    "url": "mailto:ahmadnaseer3313@gmail.com",                     "handle": "ahmadnaseer3313@gmail.com"},
       {"icon": "📝", "label": "Dev.to",   "url": "#",                                                        "handle": "@naseer"}
     ]
   },

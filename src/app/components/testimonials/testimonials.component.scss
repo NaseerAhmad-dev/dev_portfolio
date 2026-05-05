@@ -139,5 +139,11 @@
 @media (max-width: 680px) {
   .testi-grid { grid-template-columns: 1fr }
   .testi-meta { display: none }
-  .testi-card { padding: 1.5rem }
+  .testi-card { padding: 1.5rem; gap: 1rem }
+  .testi-quote-mark { font-size: 3rem }
+  .testi-quote { font-size: .86rem; line-height: 1.8 }
+}
+
+@media (max-width: 400px) {
+  .testi-card { padding: 1.25rem }
 }
