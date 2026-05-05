@@ -1,0 +1,3 @@
+import{Component,OnInit}from'@angular/core';import{PortfolioService}from'../../core/services/portfolio.service';
+@Component({selector:'app-experience',templateUrl:'./experience.component.html',styleUrls:['./experience.component.scss']})
+export class ExperienceComponent implements OnInit{experience:any;constructor(private p:PortfolioService){}ngOnInit():void{this.p.getData().subscribe(d=>this.experience=d.experience)}}

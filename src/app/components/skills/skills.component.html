@@ -1,0 +1,26 @@
+<section class="section" id="skills" *ngIf="skills">
+  <div class="section-label">
+    <span class="section-kicker">{{ skills.kicker }}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="skills.title | highlightWord:skills.titleHighlight"></h2>
+
+  <div class="skills-body">
+    <div class="skill-cat" *ngFor="let cat of skills.categories">
+      <div class="skill-cat-head">
+        <span class="skill-cat-label">{{ cat.emoji }} {{ cat.label }}</span>
+        <div class="skill-cat-rule"></div>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row" *ngFor="let s of cat.items">
+          <span class="sk-icon">{{ s.icon }}</span>
+          <span class="sk-name">{{ s.name }}</span>
+          <div class="sk-bar-wrap">
+            <div class="sk-fill" [style.width.%]="s.level"></div>
+          </div>
+          <span class="sk-pct">{{ s.level }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

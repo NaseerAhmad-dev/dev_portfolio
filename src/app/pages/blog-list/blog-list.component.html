@@ -1,0 +1,4 @@
+<div class="blog-hero" *ngIf="meta"><div class="bhi"><div class="bk">{{meta.kicker}}</div><h1 class="bpt" [innerHTML]="meta.pageTitle | highlightWord:meta.pageTitleHighlight"></h1><p class="bps">{{meta.pageSubtitle}}</p></div></div>
+<div class="bfw"><button class="fb" *ngFor="let c of categories" [class.active]="c===activeFilter" (click)="setFilter(c)">{{c}}</button></div>
+<div class="bgw"><div class="bg"><div class="bc" *ngFor="let b of filtered" [class.bf]="b.featured&&activeFilter==='All'" (click)="open(b.id)"><div class="bco" [ngClass]="b.coverClass"><span class="fbadge" *ngIf="b.featured&&activeFilter==='All'">★ Featured</span>{{b.icon}}</div><div class="bcb"><div class="bcat">{{b.category}}</div><div class="bt">{{b.title}}</div><div class="bex">{{b.excerpt}}</div><div class="bm"><span>{{b.date}}</span><span class="rp">{{b.readTime}}</span></div></div></div></div></div>
+<app-footer></app-footer>

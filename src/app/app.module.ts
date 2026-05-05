@@ -1,0 +1,21 @@
+import{NgModule}from'@angular/core';import{BrowserModule}from'@angular/platform-browser';import{HttpClientModule}from'@angular/common/http';import{ReactiveFormsModule}from'@angular/forms';
+import{AppRoutingModule}from'./app-routing.module';import{AppComponent}from'./app.component';
+import{NavComponent}from'./components/nav/nav.component';
+import{HeroComponent}from'./components/hero/hero.component';
+import{AboutComponent}from'./components/about/about.component';
+import{SkillsComponent}from'./components/skills/skills.component';
+import{ProjectsComponent}from'./components/projects/projects.component';
+import{ExperienceComponent}from'./components/experience/experience.component';
+import{ContactComponent}from'./components/contact/contact.component';
+import{FooterComponent}from'./components/footer/footer.component';
+import{BlogTickerComponent}from'./components/blog-ticker/blog-ticker.component';
+import{HomePageComponent}from'./pages/home/home.component';
+import{BlogListComponent}from'./pages/blog-list/blog-list.component';
+import{BlogDetailComponent}from'./pages/blog-detail/blog-detail.component';
+import{CertificationsComponent}from'./components/certifications/certifications.component';
+import{WhatsappButtonComponent}from'./components/whatsapp-button/whatsapp-button.component';
+import{EducationComponent}from'./components/education/education.component';
+import{TestimonialsComponent}from'./components/testimonials/testimonials.component';
+import{HighlightWordPipe}from'./shared/pipes/highlight-word.pipe';
+@NgModule({declarations:[AppComponent,NavComponent,HeroComponent,AboutComponent,SkillsComponent,ProjectsComponent,ExperienceComponent,ContactComponent,FooterComponent,BlogTickerComponent,CertificationsComponent,EducationComponent,TestimonialsComponent,WhatsappButtonComponent,HomePageComponent,BlogListComponent,BlogDetailComponent,HighlightWordPipe],imports:[BrowserModule,HttpClientModule,ReactiveFormsModule,AppRoutingModule],bootstrap:[AppComponent]})
+export class AppModule{}

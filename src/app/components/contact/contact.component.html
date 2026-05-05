@@ -1,0 +1,58 @@
+<section class="section" id="contact" *ngIf="contact">
+  <div class="section-label">
+    <span class="section-kicker">{{ contact.kicker }}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="contact.title | highlightWord:contact.titleHighlight"></h2>
+
+  <div class="contact-grid">
+
+    <div class="contact-form-card glass">
+      <p class="contact-tagline">{{ contact.tagline }} <em>{{ contact.taglineItalic }}</em></p>
+      <p class="contact-sub">{{ contact.subtitle }}</p>
+
+      <!-- Success state -->
+      <div class="form-success" *ngIf="sent">
+        <span class="form-success-icon">✓</span>
+        <div>
+          <strong>Message sent!</strong>
+          <span>I'll get back to you within 24 hours.</span>
+        </div>
+      </div>
+
+      <!-- Error state -->
+      <div class="form-error" *ngIf="error">
+        <span class="form-error-icon">!</span>
+        <div>
+          <strong>Something went wrong.</strong>
+          <span>Please <a href="mailto:ahmadnaseer3313&#64;gmail.com">email me directly</a> instead.</span>
+        </div>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!sent">
+        <input  class="glass-input" type="text"  formControlName="name"    [placeholder]="contact.namePlaceholder">
+        <input  class="glass-input" type="email" formControlName="email"   [placeholder]="contact.emailPlaceholder">
+        <textarea class="glass-input glass-ta"   formControlName="message" [placeholder]="contact.messagePlaceholder"></textarea>
+        <button class="btn-glow submit-btn" type="submit" [disabled]="form.invalid || sending">
+          <span *ngIf="!sending">{{ contact.ctaLabel }}</span>
+          <span *ngIf="sending" class="sending-state">
+            <span class="spinner"></span> Sending…
+          </span>
+        </button>
+      </form>
+    </div>
+
+    <div class="contact-socials glass">
+      <div class="socials-kicker">{{ contact.socialsKicker }}</div>
+      <a class="social-item" *ngFor="let s of contact.socials" [href]="s.url" target="_blank" rel="noopener">
+        <div class="social-icon-wrap">{{ s.icon }}</div>
+        <div class="social-info">
+          <span class="social-label">{{ s.label }}</span>
+          <span class="social-handle">{{ s.handle }}</span>
+        </div>
+        <span class="social-caret">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>

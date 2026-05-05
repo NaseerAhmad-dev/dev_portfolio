@@ -1,0 +1,24 @@
+<div class="section" id="work" *ngIf="projects">
+  <div class="section-label">
+    <span class="section-kicker">{{projects.kicker}}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="projects.title | highlightWord:projects.titleHighlight"></h2>
+  <div class="proj-grid">
+    <div class="proj-card" *ngFor="let p of projects.items; let i=index">
+      <div class="proj-thumb" [ngClass]="p.thumbClass">
+        <span class="proj-emoji">{{p.icon}}</span>
+        <span class="proj-idx">0{{i+1}}</span>
+        <span class="proj-arrow">↗</span>
+      </div>
+      <div class="proj-body">
+        <div class="proj-tag">{{p.tag}}</div>
+        <div class="proj-title">{{p.title}}</div>
+        <div class="proj-desc">{{p.description}}</div>
+        <div class="proj-links">
+          <a class="proj-link" *ngFor="let l of p.links" [href]="l.url">{{l.label}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

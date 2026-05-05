@@ -1,0 +1,24 @@
+<section class="section" id="certs" *ngIf="certifications">
+  <div class="section-label">
+    <span class="section-kicker">{{ certifications.kicker }}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="certifications.title | highlightWord:certifications.titleHighlight"></h2>
+
+  <div class="certs-grid">
+    <div class="cert-card" *ngFor="let c of certifications.items">
+      <div class="cert-top">
+        <div class="cert-icon">{{ c.issuerIcon }}</div>
+        <div class="cert-meta">
+          <span class="cert-issuer">{{ c.issuer }}</span>
+          <span class="cert-date">Issued {{ c.date }}</span>
+        </div>
+      </div>
+      <p class="cert-title">{{ c.title }}</p>
+      <a class="cert-link" *ngIf="c.credentialUrl" [href]="c.credentialUrl" target="_blank" rel="noopener">
+        View credential ↗
+      </a>
+      <span class="cert-no-link" *ngIf="!c.credentialUrl">Verified</span>
+    </div>
+  </div>
+</section>

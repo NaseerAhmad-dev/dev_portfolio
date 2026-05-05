@@ -1,0 +1,25 @@
+<section class="section" id="edu" *ngIf="education">
+  <div class="section-label">
+    <span class="section-kicker">{{ education.kicker }}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="education.title | highlightWord:education.titleHighlight"></h2>
+
+  <div class="edu-grid">
+    <div class="edu-card glass" *ngFor="let e of education.items">
+      <div class="edu-top">
+        <div class="edu-icon">{{ e.icon }}</div>
+        <div class="edu-grade">
+          <span class="edu-grade-val">{{ e.grade }}</span>
+          <span class="edu-grade-lbl">{{ e.gradeLabel }}</span>
+        </div>
+      </div>
+      <div class="edu-degree">{{ e.degree }}</div>
+      <div class="edu-field">{{ e.field }}</div>
+      <div class="edu-footer">
+        <span class="edu-institution">{{ e.institution }}</span>
+        <span class="edu-period">{{ e.period }}</span>
+      </div>
+    </div>
+  </div>
+</section>

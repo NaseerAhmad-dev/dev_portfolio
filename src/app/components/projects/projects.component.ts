@@ -1,0 +1,3 @@
+import{Component,OnInit}from'@angular/core';import{PortfolioService}from'../../core/services/portfolio.service';
+@Component({selector:'app-projects',templateUrl:'./projects.component.html',styleUrls:['./projects.component.scss']})
+export class ProjectsComponent implements OnInit{projects:any;constructor(private p:PortfolioService){}ngOnInit():void{this.p.getData().subscribe(d=>this.projects=d.projects)}}

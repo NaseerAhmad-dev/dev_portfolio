@@ -1,0 +1,86 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.about-bio {
+  padding: 2.25rem;
+}
+
+.about-p {
+  font-size: .88rem;
+  line-height: 1.95;
+  color: var(--text2);
+  font-weight: 400;
+  margin-bottom: 1.1rem;
+
+  &:last-child { margin-bottom: 0 }
+}
+
+.about-traits {
+  padding: 2rem;
+}
+
+.traits-head {
+  font-size: .58rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.trait {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .6rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding-left .15s;
+
+  &:last-child { border-bottom: none }
+
+  &:hover {
+    padding-left: .4rem;
+
+    .trait-arrow { opacity: 1; color: var(--accent) }
+  }
+}
+
+.trait-num {
+  font-size: .58rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: .5;
+  min-width: 18px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
+}
+
+.trait-label {
+  font-size: .84rem;
+  font-weight: 500;
+  color: var(--text2);
+  flex: 1;
+  letter-spacing: -.01em;
+}
+
+.trait-arrow {
+  font-size: .72rem;
+  color: var(--text3);
+  opacity: 0;
+  transition: opacity .15s, color .15s;
+}
+
+@media (max-width: 680px) {
+  .about-grid { grid-template-columns: 1fr }
+  .about-bio { padding: 1.5rem }
+  .about-traits { padding: 1.5rem }
+}
+
+@media (max-width: 400px) {
+  .about-bio { padding: 1.25rem }
+  .about-traits { padding: 1.25rem }
+}

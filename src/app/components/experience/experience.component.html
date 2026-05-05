@@ -1,0 +1,29 @@
+<section class="section" id="exp" *ngIf="experience">
+  <div class="section-label">
+    <span class="section-kicker">{{ experience.kicker }}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="experience.title | highlightWord:experience.titleHighlight"></h2>
+
+  <div class="exp-timeline">
+    <div class="exp-item" *ngFor="let e of experience.items; let last = last">
+      <div class="exp-track">
+        <div class="exp-dot"></div>
+        <div class="exp-line" *ngIf="!last"></div>
+      </div>
+      <div class="exp-content" [class.last]="last">
+        <div class="exp-meta">
+          <div class="exp-left">
+            <div class="exp-role">{{ e.role }}</div>
+            <div class="exp-company">{{ e.company }}</div>
+          </div>
+          <div class="exp-period">{{ e.period }}</div>
+        </div>
+        <p class="exp-desc">{{ e.description }}</p>
+        <div class="exp-tags">
+          <span class="exp-tag" *ngFor="let t of e.tags">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

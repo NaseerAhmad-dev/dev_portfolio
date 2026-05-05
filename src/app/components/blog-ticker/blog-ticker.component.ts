@@ -1,0 +1,3 @@
+import{Component,OnInit}from'@angular/core';import{Router}from'@angular/router';import{BlogService}from'../../core/services/blog.service';import{BlogItem}from'../../shared/models/portfolio.model';
+@Component({selector:'app-blog-ticker',templateUrl:'./blog-ticker.component.html',styleUrls:['./blog-ticker.component.scss']})
+export class BlogTickerComponent implements OnInit{items:BlogItem[]=[];constructor(private b:BlogService,private r:Router){}ngOnInit():void{this.b.getAll().subscribe(b=>this.items=b)}go():void{this.r.navigate(['/blog'])}}

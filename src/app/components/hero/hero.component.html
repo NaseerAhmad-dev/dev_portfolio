@@ -1,0 +1,32 @@
+<section class="hero" id="home" *ngIf="hero">
+
+  <header class="hero-header">
+    <span class="hero-status">
+      <span class="hero-dot"></span>{{ availableText }}
+    </span>
+    <span class="hero-index">00</span>
+  </header>
+
+  <div class="hero-copy">
+    <span class="hero-greeting">{{ hero.titleLine1 }}</span>
+    <h1 class="hero-name">{{ hero.titleLine2 }}</h1>
+    <span class="hero-role">{{ hero.titleLine3 }}</span>
+  </div>
+
+  <p class="hero-sub">{{ hero.subtitle }}</p>
+
+  <div class="hero-actions">
+    <button class="btn-glow">{{ hero.ctaPrimary }}</button>
+    <button class="btn-glass">{{ hero.ctaSecondary }}</button>
+  </div>
+
+  <hr class="hero-rule">
+
+  <div class="hero-stats">
+    <div class="hero-stat" *ngFor="let s of hero.stats">
+      <span class="hero-stat-val">{{ s.value }}</span>
+      <span class="hero-stat-lbl">{{ s.label }}</span>
+    </div>
+  </div>
+
+</section>

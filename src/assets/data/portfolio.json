@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "available": true,
+    "availableText": "Open to opportunities",
+    "navLinks": [
+      {"label": "About",   "href": "#about"},
+      {"label": "Skills",  "href": "#skills"},
+      {"label": "Work",    "href": "#work"},
+      {"label": "Journey", "href": "#exp"},
+      {"label": "Education","href": "#edu"},
+      {"label": "Certs",   "href": "#certs"},
+      {"label": "Contact", "href": "#contact"}
+    ]
+  },
+
+  "hero": {
+    "titleLine1": "Hi, I'm",
+    "titleLine2": "Naseer.",
+    "titleLine3": "I build the web.",
+    "subtitle": "Angular-focused Software Developer with 3+ years at Purple Mavens, shipping 100+ production UIs, architecting component libraries, and integrating real-time data systems.",
+    "ctaPrimary": "View my work →",
+    "ctaSecondary": "Download CV",
+    "scrollHint": "scroll to explore",
+    "stats": [
+      {"value": "100+", "label": "uis.shipped"},
+      {"value": "3+ yrs", "label": "at.purple.mavens"},
+      {"value": "30+",   "label": "components.built"}
+    ]
+  },
+
+  "about": {
+    "kicker": "01 — About",
+    "title": "Who I am",
+    "titleHighlight": "am",
+    "traitsHead": "What I do",
+    "paragraphs": [
+      "I'm Naseer — a Software Developer based in Hyderabad, India, currently working full-time at Purple Mavens. I specialise in Angular and the MEAN stack, having shipped 100+ pixel-perfect production UIs, architected a 30+ component library that cut development time by 60%, and delivered complete modules solo from requirements to deployment.",
+      "I care deeply about clean architecture, scalable state management with NgRx, and real-time data visualisation. Outside of shipping features, I enjoy mentoring junior developers, driving code quality through reviews, and exploring new tools. I hold a Master's in Computer Science from the University of Kashmir."
+    ],
+    "traits": [
+      "Angular & MEAN Stack",
+      "Component Library Architecture",
+      "State Management (NgRx / RxJS)",
+      "Real-time Data Visualisation",
+      "API Design & Integration",
+      "Geospatial Features (OpenLayers)",
+      "Mentoring & Code Review"
+    ]
+  },
+
+  "skills": {
+    "kicker": "02 — Skills",
+    "title": "Tech Stack",
+    "titleHighlight": "Stack",
+    "categories": [
+      {
+        "key": "frontend",
+        "label": "Frontend",
+        "emoji": "🖥️",
+        "items": [
+          {"icon": "🅰️", "name": "Angular",    "level": 92},
+          {"icon": "⚡", "name": "TypeScript",  "level": 86},
+          {"icon": "🟨", "name": "JavaScript",  "level": 88},
+          {"icon": "🌊", "name": "CSS / SCSS",  "level": 95}
+        ]
+      },
+      {
+        "key": "state",
+        "label": "State & APIs",
+        "emoji": "🔄",
+        "items": [
+          {"icon": "🔀", "name": "NgRx",        "level": 82},
+          {"icon": "♾️", "name": "RxJS",         "level": 80},
+          {"icon": "🔌", "name": "REST APIs",    "level": 88},
+          {"icon": "🗺️", "name": "OpenLayers",   "level": 70}
+        ]
+      },
+      {
+        "key": "backend",
+        "label": "Backend & Tools",
+        "emoji": "🛠️",
+        "items": [
+          {"icon": "🟢", "name": "Node.js",     "level": 74},
+          {"icon": "🍃", "name": "MongoDB",     "level": 68},
+          {"icon": "🐍", "name": "Python",      "level": 60},
+          {"icon": "🐙", "name": "Git / GitHub","level": 92}
+        ]
+      }
+    ]
+  },
+
+  "projects": {
+    "kicker": "03 — Projects",
+    "title": "Selected Work",
+    "titleHighlight": "Work",
+    "items": [
+      {
+        "id": 1,
+        "tag": "Angular · NgRx",
+        "title": "Component Library (30+ Components)",
+        "description": "Architected and built a reusable component library that reduced feature development time by 60% and standardised the entire product's UI.",
+        "icon": "🧩",
+        "thumbClass": "pt1",
+        "links": [{"label": "Case study", "url": "#"}]
+      },
+      {
+        "id": 2,
+        "tag": "Angular · RBAC",
+        "title": "Real-time Dashboard Platform",
+        "description": "User-configurable dashboards with real-time data visualisation, customisable widgets, and role-based access control for secure multi-tenant data presentation.",
+        "icon": "📊",
+        "thumbClass": "pt2",
+        "links": [{"label": "Case study", "url": "#"}]
+      },
+      {
+        "id": 3,
+        "tag": "Angular · OpenLayers",
+        "title": "Asset Management Module",
+        "description": "Delivered the full Asset Management module solo — from requirement gathering to production deployment — including geospatial features with OpenLayers mapping.",
+        "icon": "🗺️",
+        "thumbClass": "pt3",
+        "links": [{"label": "Case study", "url": "#"}]
+      },
+      {
+        "id": 4,
+        "tag": "MEAN Stack",
+        "title": "Car Rental Web Application",
+        "description": "Full-stack car rental platform built with MongoDB, Express, Angular, and Node.js — handling bookings, user auth, and vehicle inventory management.",
+        "icon": "🚗",
+        "thumbClass": "pt4",
+        "links": [{"label": "GitHub", "url": "#"}]
+      }
+    ]
+  },
+
+  "experience": {
+    "kicker": "04 — Experience",
+    "title": "My Journey",
+    "titleHighlight": "Journey",
+    "items": [
+      {
+        "role": "Software Developer",
+        "company": "Purple Mavens",
+        "period": "Jan 2023 — Present",
+        "description": "Delivered 100+ responsive, pixel-perfect Angular UIs for a B2B SaaS platform. Architected a 30+ component library that cut development time by 60%. Integrated 40+ FAST APIs with NgRx, built real-time dashboards with RBAC, and shipped the Asset Management module solo end-to-end. Mentored 4 junior developers and reduced production bugs by 20%.",
+        "tags": ["Angular", "NgRx", "TypeScript", "JavaScript", "SCSS", "REST APIs", "OpenLayers", "RBAC"]
+      },
+      {
+        "role": "MEAN Stack Developer",
+        "company": "LeLafe IT Solutions",
+        "period": "Oct 2022 — Nov 2022",
+        "description": "Apprenticeship where I developed a full-stack car rental web application using the MEAN stack, implementing REST APIs with Node/Express and the Angular frontend.",
+        "tags": ["Angular", "TypeScript", "Node.js", "MongoDB", "Express.js"]
+      },
+      {
+        "role": "Web Development Intern",
+        "company": "The Digital London · AIIoTS Geek World",
+        "period": "Aug 2022 — Sep 2022",
+        "description": "Explored frontend web technologies hands-on — built responsive web pages and product clones, gaining practical experience in HTML, CSS, and vanilla JavaScript.",
+        "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"]
+      },
+      {
+        "role": "Computer Teacher",
+        "company": "National Council for Promotion of Urdu Language",
+        "period": "Jan 2020",
+        "description": "Delivered computer literacy instruction and Python programming training to students as part of the NCPUL programme.",
+        "tags": ["Python", "Computer Training"]
+      }
+    ]
+  },
+
+  "education": {
+    "kicker": "05 — Education",
+    "title": "Academic Background",
+    "titleHighlight": "Academic",
+    "items": [
+      {
+        "id": 1,
+        "degree": "Master of Computer Science",
+        "field": "Computer Science",
+        "institution": "University of Kashmir",
+        "period": "Jul 2019 – Dec 2022",
+        "grade": "7.78",
+        "gradeLabel": "CGPA",
+        "icon": "🎓"
+      },
+      {
+        "id": 2,
+        "degree": "Bachelor of Computer Science",
+        "field": "Computer Science",
+        "institution": "University of Kashmir",
+        "period": "May 2015 – Jan 2019",
+        "grade": "7.24",
+        "gradeLabel": "CGPA",
+        "icon": "📚"
+      }
+    ]
+  },
+
+  "certifications": {
+    "kicker": "06 — Certifications",
+    "title": "Licenses & Certifications",
+    "titleHighlight": "Certifications",
+    "items": [
+      {"id": 1, "title": "Angular Developer (Basic)",                               "issuer": "HackerRank",        "issuerIcon": "🏆", "date": "May 2024", "credentialUrl": null},
+      {"id": 2, "title": "HTML, CSS and JavaScript Complete Certification Course",   "issuer": "Udemy",             "issuerIcon": "🎓", "date": "Dec 2022", "credentialUrl": "#"},
+      {"id": 3, "title": "Complete Responsive Web Development: 4 courses in 1",     "issuer": "Udemy",             "issuerIcon": "🎓", "date": "Sep 2022", "credentialUrl": "#"},
+      {"id": 4, "title": "Succeeding in Web Development: FullStack and Front End",  "issuer": "LinkedIn Learning", "issuerIcon": "💼", "date": "Aug 2022", "credentialUrl": "#"},
+      {"id": 5, "title": "Theoretical Understanding of HTML",                        "issuer": "Sololearn",         "issuerIcon": "📚", "date": "Aug 2022", "credentialUrl": "#"}
+    ]
+  },
+
+  "testimonials": {
+    "kicker": "07 — Recommendations",
+    "title": "What People Say",
+    "titleHighlight": "Say",
+    "items": [
+      {
+        "id": 1,
+        "quote": "Naseer is a very self driven professional. He is a real tech nerd, always passionate about taking challenges.",
+        "author": "Jalil Ahmad",
+        "role": "Senior Software Engineer & Team Lead",
+        "company": "Purple Mavens",
+        "relation": "Managed Naseer directly",
+        "date": "November 2025",
+        "initials": "JA",
+        "linkedinUrl": "https://www.linkedin.com/in/naseer-ahmad-a59096229"
+      },
+      {
+        "id": 2,
+        "quote": "I had the pleasure of working with Naseer Ahmad, and I can confidently say he is an exceptional software developer. He brings strong problem-solving skills, writes clean and efficient code, and consistently delivers high-quality solutions on time. What stands out most is his ability to quickly grasp complex requirements and turn them into practical, scalable software. Beyond technical expertise, Naseer is a great team player who communicates clearly and collaborates effectively, making him an asset to any development team.",
+        "author": "Mohmmad Farooq Bhat",
+        "role": "Chief Technology Officer",
+        "company": "Purple Mavens",
+        "relation": "Worked on the same team",
+        "date": "September 2025",
+        "initials": "MF",
+        "linkedinUrl": "https://www.linkedin.com/in/naseer-ahmad-a59096229"
+      }
+    ]
+  },
+
+  "contact": {
+    "kicker": "08 — Contact",
+    "whatsappNumber": "91XXXXXXXXXX",
+    "whatsappMessage": "Hi Naseer! I came across your portfolio and I'm interested in your services.",
+    "formEndpoint": "https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID",
+    "title": "Let's Connect",
+    "titleHighlight": "Connect",
+    "tagline": "Got a project in mind?",
+    "taglineItalic": "Let's build it.",
+    "subtitle": "I'm currently open to new opportunities — freelance, full-time, or collaboration. Drop me a message and I'll get back within 24 hours.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Tell me about your project or opportunity...",
+    "ctaLabel": "Send message →",
+    "socialsKicker": "Find me online",
+    "socials": [
+      {"icon": "🐙", "label": "GitHub",   "url": "#",                                                        "handle": "@naseer-dev"},
+      {"icon": "💼", "label": "LinkedIn", "url": "https://www.linkedin.com/in/naseer-ahmad-a59096229",       "handle": "/in/naseer-ahmad"},
+      {"icon": "🐦", "label": "Twitter",  "url": "#",                                                        "handle": "@naseer_eng"},
+      {"icon": "📧", "label": "Email",    "url": "mailto:naseer.ahmad@purplemavens.com",                     "handle": "naseer.ahmad@purplemavens.com"},
+      {"icon": "📝", "label": "Dev.to",   "url": "#",                                                        "handle": "@naseer"}
+    ]
+  },
+
+  "footer": {"year": 2026},
+
+  "blogs": {
+    "kicker": "Dev Blog",
+    "pageTitle": "Dev Notes",
+    "pageTitleHighlight": "Notes",
+    "pageSubtitle": "Deep dives into Angular, frontend architecture, and the tools I use every day.",
+    "categories": ["All", "Engineering", "Frontend", "Backend", "DevOps", "Career"],
+    "items": [
+      {"id": 1, "category": "Engineering", "featured": true,  "title": "Building Design Systems That Actually Scale",        "excerpt": "After building 3 design systems from scratch, here's what I wish someone had told me earlier.",   "coverClass": "bc1", "icon": "🏗️", "date": "Mar 12, 2026", "readTime": "8 min",  "author": "Naseer", "tags": ["Design Systems", "Architecture"], "body": "<p>Design systems are sold as the holy grail of consistency — but most quietly die within 18 months.</p><h2>The mistake everyone makes</h2><p>The instinct is to open your editor and start building. But the real work happens before you write a line.</p><blockquote><p>A design system is not a component library. It is a shared language.</p></blockquote>"},
+      {"id": 2, "category": "Frontend",    "featured": false, "title": "Angular Signals in 2026 — Honest Take",              "excerpt": "Signals became stable in Angular 17. After a year in production, here's my unfiltered opinion.",       "coverClass": "bc2", "icon": "⚡", "date": "Feb 28, 2026", "readTime": "7 min",  "author": "Naseer", "tags": ["Angular", "TypeScript", "Signals"], "body": "<p>When Angular announced Signals, the community was cautiously excited.</p><blockquote><p>Signals did not make our app measurably faster. They made our code easier to reason about.</p></blockquote>"},
+      {"id": 3, "category": "Frontend",    "featured": false, "title": "NgRx in Production — Lessons After 2 Years",          "excerpt": "NgRx is powerful but carries real complexity cost. Here's what we got right and what we'd do differently.", "coverClass": "bc3", "icon": "🔀", "date": "Feb 10, 2026", "readTime": "10 min", "author": "Naseer", "tags": ["NgRx", "Angular", "State Management"], "body": "<p>We adopted NgRx early at Purple Mavens. Two years in, here's the honest review.</p><blockquote><p>NgRx shines at scale. For a small app, the boilerplate will slow you down without meaningful benefit.</p></blockquote>"},
+      {"id": 4, "category": "Engineering", "featured": false, "title": "Building a Component Library from Scratch",            "excerpt": "How we built 30+ reusable components that cut development time by 60% and what we learned.",           "coverClass": "bc4", "icon": "🧩", "date": "Jan 22, 2026", "readTime": "6 min",  "author": "Naseer", "tags": ["Angular", "Component Library", "Architecture"], "body": "<p>A component library is one of the highest-leverage investments a frontend team can make.</p><blockquote><p>The first deploy with a shared component felt almost anticlimactic. A button rendered. That was the point.</p></blockquote>"},
+      {"id": 5, "category": "Engineering", "featured": false, "title": "The Code Review Culture That Made Our Team Better",    "excerpt": "Not rules, not checklists — principles that transformed how we give and receive feedback.",             "coverClass": "bc5", "icon": "🔍", "date": "Jan 8, 2026",  "readTime": "5 min",  "author": "Naseer", "tags": ["Engineering Culture", "Code Review"], "body": "<p>Code review is one of the highest-leverage activities in software engineering.</p><blockquote><p>The goal of a code review is not to find mistakes. It is to ensure the code does what it needs to do.</p></blockquote>"},
+      {"id": 6, "category": "Career",      "featured": false, "title": "3 Years as a Developer — What I Actually Learned",    "excerpt": "The lessons that textbooks and bootcamps will not teach you.",                                        "coverClass": "bc6", "icon": "🌱", "date": "Dec 15, 2025", "readTime": "9 min",  "author": "Naseer", "tags": ["Career", "Personal"], "body": "<p>Three years ago I wrote my first production line of Angular code at Purple Mavens.</p><blockquote><p>Your code communicates with machines. You communicate with people. Both matter.</p></blockquote>"}
+    ]
+  }
+}

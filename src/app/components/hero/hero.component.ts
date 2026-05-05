@@ -1,0 +1,3 @@
+import{Component,OnInit}from'@angular/core';import{PortfolioService}from'../../core/services/portfolio.service';
+@Component({selector:'app-hero',templateUrl:'./hero.component.html',styleUrls:['./hero.component.scss']})
+export class HeroComponent implements OnInit{hero:any;available=false;availableText='';constructor(private p:PortfolioService){}ngOnInit():void{this.p.getData().subscribe(d=>{this.hero=d.hero;this.available=d.meta.available;this.availableText=d.meta.availableText})}}

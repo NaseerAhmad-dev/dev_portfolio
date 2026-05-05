@@ -1,0 +1,22 @@
+<section class="section" id="about" *ngIf="about">
+  <div class="section-label">
+    <span class="section-kicker">{{ about.kicker }}</span>
+    <div class="section-line"></div>
+  </div>
+  <h2 class="section-title" [innerHTML]="about.title | highlightWord:about.titleHighlight"></h2>
+
+  <div class="about-grid">
+    <div class="about-bio glass">
+      <p class="about-p" *ngFor="let p of about.paragraphs">{{ p }}</p>
+    </div>
+
+    <div class="about-traits glass">
+      <div class="traits-head">{{ about.traitsHead }}</div>
+      <div class="trait" *ngFor="let t of about.traits; let i = index">
+        <span class="trait-num">{{ i + 1 | number:'2.0-0' }}</span>
+        <span class="trait-label">{{ t }}</span>
+        <span class="trait-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,218 @@
+.dw {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.bb {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: .4rem 1rem;
+  font-size: .72rem;
+  font-weight: 500;
+  color: var(--text2);
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+  transition: border-color .2s, color .2s;
+
+  &:hover { border-color: var(--accent-border); color: var(--accent) }
+}
+
+.dc {
+  height: 240px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+
+  &.bc1 { background: rgba(200,255,87,.04) }
+  &.bc2 { background: rgba(255,255,255,.02) }
+  &.bc3 { background: rgba(200,255,87,.03) }
+  &.bc4 { background: rgba(255,255,255,.015) }
+  &.bc5 { background: rgba(200,255,87,.025) }
+  &.bc6 { background: rgba(255,255,255,.01) }
+}
+
+.de {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+  flex-wrap: wrap;
+}
+
+.dcat {
+  font-size: .62rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 3px;
+  padding: .22rem .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.ddate {
+  font-size: .68rem;
+  color: var(--text3);
+}
+
+.dt {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+  margin-bottom: 1.2rem;
+}
+
+.dm {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.ac {
+  font-size: .7rem;
+  font-weight: 500;
+  color: var(--text2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .25rem .8rem;
+}
+
+.rc {
+  font-size: .7rem;
+  color: var(--text3);
+}
+
+.dtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 2rem;
+}
+
+.dtag {
+  font-size: .65rem;
+  font-weight: 500;
+  color: var(--text2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .2rem .65rem;
+}
+
+.blog-body {
+  font-size: .95rem;
+  color: var(--text2);
+  line-height: 1.9;
+  font-weight: 400;
+
+  p { margin-bottom: 1.25rem }
+
+  :ng-deep h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -.02em;
+    margin: 2.5rem 0 .8rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  :ng-deep blockquote {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 1rem 1.4rem;
+    margin: 1.75rem 0;
+
+    p { margin: 0; font-style: italic; color: var(--text) }
+  }
+
+  :ng-deep code {
+    background: var(--bg3);
+    color: var(--accent);
+    padding: .15rem .45rem;
+    border-radius: 4px;
+    font-size: .82em;
+    border: 1px solid var(--border);
+    font-family: 'Courier New', monospace;
+  }
+}
+
+.rs {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.rh {
+  font-size: .62rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.rg {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+
+.rc2 {
+  background: var(--bg2);
+  cursor: pointer;
+  transition: background .2s;
+
+  &:hover { background: var(--bg3) }
+}
+
+.rcov {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.rb { padding: .85rem }
+
+.rt {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  letter-spacing: -.01em;
+}
+
+.rd {
+  font-size: .62rem;
+  color: var(--text3);
+  margin-top: .3rem;
+}
+
+@media (max-width: 680px) {
+  .dw { padding: 2rem .875rem 4rem }
+}

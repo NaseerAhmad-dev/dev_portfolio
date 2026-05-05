@@ -1,0 +1,106 @@
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 1.75rem;
+}
+
+/* ── track column ───────────────────────────── */
+.exp-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: .2rem;
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(200,255,87,.15);
+}
+
+.exp-line {
+  flex: 1;
+  width: 1px;
+  background: var(--border);
+  margin: 8px 0 0;
+  min-height: 32px;
+}
+
+/* ── content column ─────────────────────────── */
+.exp-content {
+  padding-bottom: 2.75rem;
+
+  &.last { padding-bottom: 0 }
+}
+
+.exp-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: .85rem;
+  flex-wrap: wrap;
+}
+
+.exp-role {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -.02em;
+  line-height: 1.3;
+  margin-bottom: .2rem;
+}
+
+.exp-company {
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: -.01em;
+}
+
+.exp-period {
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--text3);
+  letter-spacing: .03em;
+  white-space: nowrap;
+  padding-top: .15rem;
+}
+
+.exp-desc {
+  font-size: .84rem;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  max-width: 640px;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.exp-tag {
+  font-size: .64rem;
+  font-weight: 500;
+  color: var(--text2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: .2rem .65rem;
+  letter-spacing: .01em;
+}
+
+@media (max-width: 680px) {
+  .exp-item { grid-template-columns: 20px 1fr; gap: 1.1rem }
+}

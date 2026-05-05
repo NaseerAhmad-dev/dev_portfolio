@@ -1,0 +1,164 @@
+@keyframes pulse {
+  0%, 100% { opacity: 1 }
+  50% { opacity: .3 }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px) }
+  to   { opacity: 1; transform: translateY(0) }
+}
+
+.hero {
+  min-height: calc(100vh - 58px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slideIn .65s ease both;
+}
+
+/* ── header bar ────────────────────────────── */
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .72rem;
+  font-weight: 500;
+  color: var(--text2);
+}
+
+.hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  animation: pulse 2.2s ease-in-out infinite;
+}
+
+.hero-index {
+  font-size: .65rem;
+  font-weight: 600;
+  color: var(--text3);
+  letter-spacing: .18em;
+}
+
+/* ── main copy ─────────────────────────────── */
+.hero-copy { margin-bottom: 2rem }
+
+.hero-greeting {
+  display: block;
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--text2);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+}
+
+.hero-name {
+  font-size: clamp(4.5rem, 10vw, 8rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: .92;
+  letter-spacing: -.04em;
+  color: var(--text);
+  margin-bottom: .9rem;
+}
+
+.hero-role {
+  display: block;
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: -.01em;
+}
+
+/* ── subtitle ──────────────────────────────── */
+.hero-sub {
+  font-size: .9rem;
+  color: var(--text2);
+  font-weight: 400;
+  max-width: 500px;
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+}
+
+/* ── actions ───────────────────────────────── */
+.hero-actions {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* ── divider ───────────────────────────────── */
+.hero-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+
+/* ── stats ─────────────────────────────────── */
+.hero-stats {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+}
+
+.hero-stat-val {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+.hero-stat-lbl {
+  font-size: .67rem;
+  color: var(--text3);
+  font-weight: 400;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* ── responsive ────────────────────────────── */
+@media (max-width: 680px) {
+  .hero {
+    padding: 2.5rem .875rem 2rem;
+    min-height: auto;
+  }
+
+  .hero-name { font-size: clamp(3.8rem, 18vw, 5.5rem) }
+
+  .hero-stats { gap: 2rem }
+
+  .hero-header { margin-bottom: 2.5rem }
+}
+
+@media (max-width: 400px) {
+  .hero { padding: 2.5rem 1rem 2rem }
+  .hero-name { font-size: clamp(3rem, 18vw, 4rem) }
+  .hero-stats { gap: 1.5rem }
+  .hero-stat-val { font-size: 1.65rem }
+  .hero-actions { flex-direction: column; align-items: stretch }
+  .hero-actions .btn-glow,
+  .hero-actions .btn-glass { text-align: center }
+}
