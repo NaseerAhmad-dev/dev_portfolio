@@ -173,7 +173,7 @@
   },
 
   "education": {
-    "kicker": "05 — Education",
+    "kicker": "06 — Education",
     "title": "Academic Background",
     "titleHighlight": "Academic",
     "items": [
@@ -201,7 +201,7 @@
   },
 
   "certifications": {
-    "kicker": "06 — Certifications",
+    "kicker": "07 — Certifications",
     "title": "Licenses & Certifications",
     "titleHighlight": "Certifications",
     "items": [
@@ -214,7 +214,7 @@
   },
 
   "testimonials": {
-    "kicker": "07 — Recommendations",
+    "kicker": "05 — Recommendations",
     "title": "What People Say",
     "titleHighlight": "Say",
     "items": [

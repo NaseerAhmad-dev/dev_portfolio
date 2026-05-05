@@ -1,6 +1,6 @@
 .testi-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 1.25rem;
   align-items: start;
 }
@@ -12,6 +12,7 @@
   gap: 1.5rem;
   transition: border-color .2s;
   position: relative;
+  min-width: 0;
 
   &:hover { border-color: var(--border2) }
 }

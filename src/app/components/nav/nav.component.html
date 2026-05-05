@@ -11,7 +11,7 @@
 
   <!-- center: nav links -->
   <div class="nav-links" [class.open]="menuOpen">
-    <a *ngFor="let l of navLinks" [href]="l.href" (click)="closeMenu()">{{ l.label }}</a>
+    <a *ngFor="let l of navLinks" (click)="scrollTo(l.href)" style="cursor:pointer">{{ l.label }}</a>
     <a routerLink="/blog" routerLinkActive="active" class="nav-blog-pill" (click)="closeMenu()">Blog</a>
   </div>
 

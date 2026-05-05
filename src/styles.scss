@@ -214,36 +214,7 @@ footer {
   &:hover { box-shadow: 0 8px 24px rgba(61,82,0,.2) }
 }
 
-/* Nav */
-[data-theme="light"] nav {
-  background: rgba(255,255,255,.96);
-  border-bottom-color: rgba(0,0,0,.1);
-}
-
-/* Nav link text — override scoped component style */
-[data-theme="light"] .nav-links a:not(.nav-blog-pill) {
-  color: #1a1a1a !important;
-}
-
-[data-theme="light"] .nav-links a:not(.nav-blog-pill):hover {
-  color: var(--accent) !important;
-  background: rgba(61,82,0,.06) !important;
-}
-
-/* Theme toggle icon visibility in light mode */
-[data-theme="light"] .theme-toggle {
-  color: #333 !important;
-  border-color: rgba(0,0,0,.15) !important;
-}
-
-/* Blog pill in light mode — cleaner lime with dark text */
-[data-theme="light"] .nav-blog-pill {
-  background: rgba(200,255,87,.3) !important;
-  color: #2a3800 !important;
-  border-color: rgba(61,82,0,.3) !important;
-  font-weight: 600 !important;
-  &:hover { background: rgba(200,255,87,.48) !important }
-}
+/* Nav light-mode overrides now live in nav.component.scss via :host-context() */
 
 /* Blog ticker */
 [data-theme="light"] .blog-ticker {
@@ -293,13 +264,6 @@ footer {
 }
 
 /* ─── Responsive ─────────────────────────────── */
-/* Light mode mobile nav dropdown (matches hamburger breakpoint) */
-@media (max-width: 900px) {
-  [data-theme="light"] .nav-links {
-    background: rgba(244,244,242,.97);
-  }
-}
-
 @media (max-width: 680px) {
   .section { padding: 3rem .875rem }
   .section-title { font-size: 1.6rem; margin-bottom: 2rem }
