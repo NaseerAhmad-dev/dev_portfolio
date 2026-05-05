@@ -43,6 +43,7 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -58,6 +59,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color .35s ease;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  overflow-x: clip;
 }
 
 [data-theme="light"] body {
@@ -209,14 +216,33 @@ footer {
 
 /* Nav */
 [data-theme="light"] nav {
-  background: rgba(244,244,242,.92);
+  background: rgba(255,255,255,.96);
+  border-bottom-color: rgba(0,0,0,.1);
 }
 
-[data-theme="light"] .nav-blog-pill {
-  background: rgba(200,255,87,.25) !important;
+/* Nav link text — override scoped component style */
+[data-theme="light"] .nav-links a:not(.nav-blog-pill) {
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] .nav-links a:not(.nav-blog-pill):hover {
   color: var(--accent) !important;
-  border-color: var(--accent-border) !important;
-  &:hover { background: rgba(200,255,87,.38) !important }
+  background: rgba(61,82,0,.06) !important;
+}
+
+/* Theme toggle icon visibility in light mode */
+[data-theme="light"] .theme-toggle {
+  color: #333 !important;
+  border-color: rgba(0,0,0,.15) !important;
+}
+
+/* Blog pill in light mode — cleaner lime with dark text */
+[data-theme="light"] .nav-blog-pill {
+  background: rgba(200,255,87,.3) !important;
+  color: #2a3800 !important;
+  border-color: rgba(61,82,0,.3) !important;
+  font-weight: 600 !important;
+  &:hover { background: rgba(200,255,87,.48) !important }
 }
 
 /* Blog ticker */
@@ -297,6 +323,13 @@ footer {
 
 @media (max-width: 400px) {
   .section { padding: 3rem .75rem }
+
+  .section-label {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
 
   .btn-glow, .btn-glass {
     padding: .65rem 1.25rem;
