@@ -112,6 +112,8 @@ app-root {
 
 /* ─── Buttons ────────────────────────────────── */
 .btn-glow {
+  display: inline-block;
+  text-decoration: none;
   background: var(--lime);
   color: #0b0b0d;
   border: none;
@@ -135,6 +137,8 @@ app-root {
 }
 
 .btn-glass {
+  display: inline-block;
+  text-decoration: none;
   background: transparent;
   color: var(--text2);
   border: 1px solid var(--border2);

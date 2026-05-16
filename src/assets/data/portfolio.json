@@ -98,6 +98,26 @@
     "titleHighlight": "Work",
     "items": [
       {
+        "id": 5,
+        "tag": "HTML · CSS · JavaScript",
+        "title": "Magical — Creative Web Experience",
+        "description": "A visually rich, interactive web experience crafted with modern HTML, CSS animations, and JavaScript — showcasing creative UI design and smooth interactions.",
+        "icon": "✨",
+        "image": "assets/images/projects/magical.png",
+        "thumbClass": "pt5",
+        "links": [{"label": "Live Demo ↗", "url": "https://updatedmagical.netlify.app/"}]
+      },
+      {
+        "id": 6,
+        "tag": "HTML · CSS · JavaScript",
+        "title": "Hamza Tour & Travels",
+        "description": "A clean, responsive travel agency website featuring tour packages, destination highlights, and a contact flow — designed for mobile-first audiences.",
+        "icon": "✈️",
+        "image": "assets/images/projects/hamza-travels.png",
+        "thumbClass": "pt6",
+        "links": [{"label": "Live Demo ↗", "url": "https://hamzatourandtravels.netlify.app/"}]
+      },
+      {
         "id": 1,
         "tag": "Angular · NgRx",
         "title": "Component Library (30+ Components)",
