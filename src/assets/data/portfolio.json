@@ -98,6 +98,14 @@
     "titleHighlight": "Work",
     "items": [
       {
+        "id": 7,
+        "tag": "HTML · CSS · TypeScript · Angular · Firebase",
+        "title": "Discount Gallery — E-commerce Web App",
+        "description": "Online store for luxury skincare, lip colour, eye makeup and fine jewellery.",
+        "thumbClass": "pt6",
+        "links": [{"label": "Live Demo ↗", "url": "https://gonikhan.com/"}]
+      },
+      {
         "id": 5,
         "tag": "HTML · CSS · JavaScript",
         "title": "Magical — Creative Web Experience",
@@ -105,7 +113,7 @@
         "icon": "✨",
         "image": "assets/images/projects/magical.png",
         "thumbClass": "pt5",
-        "links": [{"label": "Live Demo ↗", "url": "https://updatedmagical.netlify.app/"}]
+        "links": [{"label": "Live Demo ↗", "url": "https://www.magicalmountain.in/"}]
       },
       {
         "id": 6,

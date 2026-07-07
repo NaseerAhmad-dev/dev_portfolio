@@ -6,13 +6,11 @@
   <h2 class="section-title" [innerHTML]="projects.title | highlightWord:projects.titleHighlight"></h2>
   <div class="proj-grid">
     <div class="proj-card" *ngFor="let p of projects.items; let i=index">
-      <div class="proj-thumb" [ngClass]="p.thumbClass" [class.has-image]="p.image">
-        <img *ngIf="p.image" [src]="p.image" [alt]="p.title" class="proj-thumb-img">
-        <span class="proj-emoji" *ngIf="!p.image">{{p.icon}}</span>
-        <span class="proj-idx">0{{i+1}}</span>
-        <span class="proj-arrow">↗</span>
-      </div>
       <div class="proj-body">
+        <div class="proj-head">
+          <span class="proj-idx">0{{i+1}}</span>
+          <span class="proj-arrow">↗</span>
+        </div>
         <div class="proj-tag">{{p.tag}}</div>
         <div class="proj-title">{{p.title}}</div>
         <div class="proj-desc">{{p.description}}</div>
